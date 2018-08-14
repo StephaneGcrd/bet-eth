@@ -94,8 +94,10 @@ function checkPlayerExists(address player) public constant returns(bool){
       }
       delete playerInfo[playerAddress]; // Delete all the players
       players.length = 0; // Delete all the players array
-      LoserBet = 0;
+      LoserBet = 0; //reinitialize the bets
       WinnerBet = 0;
+      totalBetsOne = 0;
+      totalBetsTwo = 0;
     }
 
     function AmountOne() public view returns(uint256){
